@@ -57,7 +57,7 @@ button {
 button:hover {
     background-color: #ffde18;
     color: #213053;
-    box-shadow: 0 16px 36px rgb(255 222 24 / 40%)
+    box-shadow: 0 16px 36px rgb(255 222 24 / 40%);
 }
 
 button svg {
@@ -319,6 +319,15 @@ input {
     align-items: center;
     height: 100%;
     padding: 50px 0;
+    position: relative;
+}
+
+.form_canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    /*width: 100%;*/
 }
 
 .form h1 {
