@@ -1,6 +1,5 @@
-
 const COLORS = ["197, 212, 250", "177, 198, 250", "144, 169, 232", "126, 160, 247", "116, 153, 247"]
-const BABBLE_DENSITY = 200
+const BABBLE_DENSITY = 70
 
 function generateFromTo(min, max){
     return (Math.random() * (max - min) + min).toFixed()
@@ -25,9 +24,9 @@ class Bubble{
         this.blur = generateFromTo(5, 9)
         this.translateX = generateFromTo(0, this.canvasWidth)
         this.translateY = generateFromTo(0, this.canvasHeight)
-        this.velosity = generateFromTo(20, 40)
-        this.moveX = generateFromTo(-5, 0) / this.velosity
-        this.moveY = generateFromTo(5, 10) / this.velosity
+        this.speed = generateFromTo(20, 40)
+        this.moveX = generateFromTo(-5, 5) / this.speed
+        this.moveY = generateFromTo(5, 10) / this.speed
     }
 
     move(){
