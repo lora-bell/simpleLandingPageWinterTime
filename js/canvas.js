@@ -1,5 +1,4 @@
 const COLORS = ["197, 212, 250", "177, 198, 250", "144, 169, 232", "126, 160, 247", "116, 153, 247"]
-const BABBLE_DENSITY = 70
 
 function generateFromTo(min, max){
     return (Math.random() * (max - min) + min).toFixed()
@@ -60,7 +59,8 @@ class CanvasBackground{
 
     generateBabbles(){
         this.bubblelist = []
-        for(let i = 1; i <= BABBLE_DENSITY; i++){
+        this.bubbleCount = Math.floor(this.canvas.width / 15)
+        for(let i = 1; i <= this.bubbleCount; i++){
             this.bubblelist.push(new Bubble(this.canvas))
         }
     }
