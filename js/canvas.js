@@ -82,5 +82,8 @@ class CanvasBackground{
    }
 }
 
-const canvasBackground = new CanvasBackground("form_canvas")
-canvasBackground.start()
+const canvasBackgroundAbout = new CanvasBackground("about_canvas")
+canvasBackgroundAbout.start()
+
+const canvasBackgroundForm = new CanvasBackground("form_canvas")
+canvasBackgroundForm.start()
