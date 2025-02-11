@@ -58,16 +58,16 @@ class CanvasBackground{
     }
 
     generateBabbles(){
-        this.bubblelist = []
+        this.bubbleList = []
         this.bubbleCount = Math.floor(this.canvas.width / 15)
         for(let i = 1; i <= this.bubbleCount; i++){
-            this.bubblelist.push(new Bubble(this.canvas))
+            this.bubbleList.push(new Bubble(this.canvas))
         }
     }
 
     animate(){
         this.context.clearRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight)
-        this.bubblelist.forEach((item) => {
+        this.bubbleList.forEach((item) => {
             item.move()
             this.context.translate(item.translateX, item.translateY)
             this.context.beginPath()
